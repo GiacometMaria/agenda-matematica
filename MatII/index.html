@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda & Lembretes Anos 60</title>
+    <!-- Importação de fontes retrô do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="vintage-container">
+        <!-- Cabeçalho Retrô -->
+        <header class="vintage-header">
+            <div class="ornament top-ornament">✧ ✦ ✧</div>
+            <h1>Diário de Lembretes</h1>
+            <div class="ornament bottom-ornament">════ ❖ ════</div>
+        </header>
+
+
+        <!-- Formulário de Criação -->
+        <main class="vintage-main">
+            <section class="form-section">
+                <h2>Novo Lembrete</h2>
+                <form id="reminder-form">
+                    <div class="input-group">
+                        <label for="reminder-text">Seu Lembrete:</label>
+                        <textarea id="reminder-text" rows="3" placeholder="Escreva aqui seu lembrete com carinho..." required></textarea>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="reminder-day">Dia da Semana:</label>
+                        <select id="reminder-day" required>
+                            <option value="" disabled selected>Selecione o dia...</option>
+                            <option value="segunda">Segunda-feira</option>
+                            <option value="terca">Terça-feira</option>
+                            <option value="quarta">Quarta-feira</option>
+                            <option value="quinta">Quinta-feira</option>
+                            <option value="sexta">Sexta-feira</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select>
+                    </div>
+
+
+                    <button type="submit" class="vintage-btn">Salvar</button>
+                </form>
+            </section>
+
+
+            <!-- Seção de Visualização por Abas -->
+            <section class="reminders-section">
+                <h2>Lembretes Registrados</h2>
+               
+                <!-- Abas dos Dias da Semana -->
+                <div class="tabs-container" role="tablist">
+                    <button class="tab-btn active" data-day="segunda" role="tab">Segunda</button>
+                    <button class="tab-btn" data-day="terca" role="tab">Terça</button>
+                    <button class="tab-btn" data-day="quarta" role="tab">Quarta</button>
+                    <button class="tab-btn" data-day="quinta" role="tab">Quinta</button>
+                    <button class="tab-btn" data-day="sexta" role="tab">Sexta</button>
+                    <button class="tab-btn" data-day="sabado" role="tab">Sábado</button>
+                    <button class="tab-btn" data-day="domingo" role="tab">Domingo</button>
+                </div>
+
+
+                <!-- Lista de Lembretes da Aba Ativa -->
+                <div class="reminders-display-area">
+                    <div id="reminders-list" class="reminders-list">
+                        <!-- Os lembretes injetados pelo JavaScript aparecerão aqui -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
